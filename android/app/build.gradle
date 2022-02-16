@@ -1,3 +1,7 @@
+plugins {
+    id "org.sonarqube" version "3.3"
+}
+
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
@@ -30,7 +34,6 @@ def keystorePropertiesFile = rootProject.file('key.properties')
 if (keystorePropertiesFile.exists()) {
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 }
-
 android {
     compileSdkVersion flutter.compileSdkVersion
 
